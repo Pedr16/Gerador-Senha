@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
+
+:root {
+    --branco: #fff;
+    --cor-de-fundo: #121212;
+    --fundo-senha: #1E2A47;
+    --fundo-texto: #2C3E50;
+    --borda: #4C9A2A;
+    --roboto: 'Roboto', sans-serif;
+    --roboto-mono: 'Roboto Mono', monospace;
+    --azul-claro: #4D8BFF;
+    --verde: #1DB954;
+    --amarelo: #FFDD57;
+    --vermelho: #E74C3C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--roboto);
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco);
+    font-family: var(--roboto);
+    line-height: 1.5;
+}
+
+.conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.conteudo-titulo {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.titulo-principal {
+    font-family: var(--roboto-mono);
+    font-size: 36px;
+    color: var(--azul-claro);
+}
+
+.titulo-secundario {
+    font-size: 22px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.conteudo-senha {
+    background: var(--fundo-senha);
+    padding: 30px;
+    border-radius: 10px;
+    border-bottom: 6px solid var(--borda);
+    margin-top: 40px;
+}
+
+#campo-senha {
+    background-color: var(--fundo-senha);
+    border: 2px solid var(--borda);
+    color: var(--branco);
+    font-family: var(--roboto-mono);
+    font-size: 40px;
+    width: 80%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+#campo-senha:focus {
+    outline: none;
+    border-color: var(--verde);
+}
+
+.parametro {
+    background-color: var(--fundo-texto);
+    border: 2px solid var(--borda);
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 30px;
+}
+
+.parametro-titulo {
+    font-family: var(--roboto-mono);
+    font-size: 28px;
+    color: var(--azul-claro);
+    margin-bottom: 20px;
+}
+
+.parametro-coluna__senha {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.parametro-senha {
+    width: 100%;
+    text-align: center;
+}
+
+.parametro-senha__titulo {
+    font-size: 20px;
+    color: var(--azul-claro);
+}
+
+.parametro-senha-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.parametro-senha__botao {
+    background-color: var(--fundo-texto);
+    color: var(--branco);
+    border: 2px solid var(--borda);
+    padding: 12px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.parametro-senha__botao:hover {
+    background-color: var(--borda);
+}
+
+.parametro-senha__texto {
+    padding: 15px;
+    border: 2px solid var(--borda);
+    border-radius: 5px;
+    margin: 0;
+    font-size: 24px;
+    background-color: var(--fundo-senha);
+    color: var(--branco);
+    margin-top: 10px;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.barra {
+    background-color: var(--fundo-senha);
+    height: 30px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.forca {
+    height: 30px;
+    position: relative;
+    bottom: 30px;
+    border-radius: 15px;
+    transition: width 0.3s ease;
+}
+
+.fraca {
+    width: 30%;
+    background-color: var(--vermelho);
+}
+
+.media {
+    background-color: var(--amarelo);
+    width: 60%;
+}
+
+.forte {
+    background-color: var(--verde);
+    width: 100%;
+}
+
+.parametro-senha-textos {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-top: 10px;
+    color: var(--branco);
+}
+
+.parametro-senha-textos p {
+    margin: 0;
+}
+
+.entropia {
+    font-size: 16px;
+    color: var(--branco);
+    margin-top: 15px;
+}
+
+/* Responsividade */
+@media screen and (min-width: 768px) {
+    .parametro-coluna__senha {
+        flex-direction: row;
+    }
+
+    .parametro-senha {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .parametro-senha {
+        width: 100%;
+    }
+
+    #campo-senha {
+        width: 90%;
+    }
+}
